@@ -1,0 +1,83 @@
+.body-buttons {
+  margin-top: 60px;
+}
+.all-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 5px;
+}
+.button {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: #fff;
+  border: 3px solid;
+  border-radius: 5px;
+  padding: 3px 10px;
+  cursor: pointer;
+}
+.icon {
+  width: 20px;
+}
+p {
+  margin: 0;
+}
+.create-car-name {
+  display: flex;
+  gap: 10px;
+}
+.input-color-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 5px;
+  position: relative;
+}
+input {
+  padding: 5px 2px;
+  border-radius: 5px;
+  border-width: 0;
+}
+input:active {
+  border: none;
+}
+.choosen-color {
+  width: 15px;
+  height: 15px;
+  border-radius: 1px;
+  border: 3px solid #fff;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.color-pallete {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  left: 50px;
+  top: 30px;
+}
+.update-car {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.generate-cars {
+  padding: 5px;
+
+  /* box-shadow: 0 0 10px 5px rgba(255, 255, 255, 0.998); */
+  border-radius: 5px;
+}
+.element-with-border {
+  border: 2px solid #00ffff; /* Neon blue border */
+  border-radius: 2px;
+  box-shadow: 0 0 10px 5px rgba(0, 149, 255, 0.5); /* Neon blue shadow */
+}
+.arrows {
+  width: 100vw;
+  overflow-x: hidden;
+  position: relative;
+}
+.arrow-svg {
+  width: 30px;
+}

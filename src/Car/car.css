@@ -1,0 +1,56 @@
+.road {
+  display: flex;
+  align-items: center;
+  border-top: 2px solid #fff;
+  padding: 10px;
+}
+
+.selectAndRemove {
+  display: flex;
+  gap: 4px;
+  flex-direction: column;
+}
+.car-buttons {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  cursor: pointer;
+}
+.selectAndRemove :first-child {
+  border: 2px solid #00f7ff;
+  color: rgb(0, 247, 255);
+}
+.selectAndRemove div {
+  padding: 5px;
+  border-radius: 5px;
+}
+.selectAndRemove :last-child {
+  border: 2px solid #ff10f0;
+  color: #ff10f0;
+}
+.startPause {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.startPause div {
+  padding: 5px 7px;
+  border-radius: 5px;
+}
+
+.startPause :first-child {
+  border: 2px solid #ffff00;
+  color: #ffff00;
+}
+.startPause :last-child {
+  border: 2px solid #39ff14;
+  color: #39ff14;
+}
+.car {
+  transform: rotateY(180deg);
+  width: 100px;
+}
+.car-name {
+  font-size: 24px;
+  text-align: center;
+}

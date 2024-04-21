@@ -1,0 +1,79 @@
+.header {
+  display: flex;
+
+  justify-content: space-between;
+  gap: 200px;
+}
+.right-side {
+  display: flex;
+  align-items: center;
+  width: 40vw;
+  gap: 30px;
+}
+.circle {
+  font-size: 36px;
+  color: #fff;
+  text-shadow: 0 0 2px white, 0 0 2px white, 0 0 2px white, 0 0 0px #00fff3,
+    0 0 70px #00fff3, 0 0 80px #00fff3, 0 0 100px #00fff3, 0 0 150px #00fff3; /* Add multiple shadows to create a glowing effect */
+  width: 200px; /* Adjust width and height as needed */
+  height: 200px;
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin: 0;
+  text-align: center;
+
+  border: 3px solid #ff6ec7; /* Set the border to a 2px solid line with neon pink color */
+  box-shadow: 0 0 5px #00fff3, 0 0 20px #00fff3, 0 0 10px #00fff3,
+    0 0 10px #00fff3, 0 0 10px #00fff3; /* Add multiple shadows to create a glowing effect */
+  border-radius: 50%; /* Make the div circular */
+  text-align: center;
+}
+.circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.fisrt-arrow {
+  align-self: flex-end;
+  margin-top: 90px;
+}
+.second-arrow {
+  align-self: flex-start;
+}
+.Arrow {
+  width: 200px;
+}
+.left-side {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: 40vw;
+  gap: 30px;
+  margin-top: 100px;
+}
+.header-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.header-button {
+  width: 135px;
+  padding: 5px 10px;
+  text-align: center;
+  font-size: 14px;
+  color: #fff;
+  text-shadow: 0 0 10px white, 0 0 20px white, 0 0 30px white, 0 0 40px #00fff3,
+    0 0 70px #00fff2, 0 0 80px #00fff3, 0 0 100px #00fff3, 0 0 150px #00fff3; /* Add multiple shadows to create a glowing effect */
+  border: 3px solid #ff6ec7;
+  border-radius: 15px;
+}
+.header-button:nth-child(1) {
+}
+.header-button:nth-child(2) {
+  align-self: baseline;
+}
