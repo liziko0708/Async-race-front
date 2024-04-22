@@ -40,16 +40,20 @@ const Car: React.ForwardRefRenderFunction<CarRef, CarProps> = (
     onUpdate(car.id, { name: car.name, color: car.color });
   };
 
+  interface RaceResponse {
+    success: boolean;
+    distance: number;
+    velocity: number;
+    // Add any other properties if present in the response object
+  }
+
   const handleRaceACar = async () => {
     try {
-      const startResponse = await raceACar(car.id, "started");
+      const startResponse: RaceResponse = await raceACar(car.id, "started");
 
-      console.log(startResponse);
-      const driveResponse = await raceACar(car.id, "drive");
+      const driveResponse: RaceResponse = await raceACar(car.id, "drive");
 
-      console.log(driveResponse);
       if (driveResponse.success === true) {
-        // setisDriving(true);
         const duration = startResponse.distance / startResponse.velocity;
         setSpeed(duration);
         console.log(duration);

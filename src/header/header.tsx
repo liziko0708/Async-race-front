@@ -1,5 +1,5 @@
 import "./header.css";
-import { Link } from "react-router-dom";
+
 import lightningImage from "../assets/lightning-image.png";
 
 function Header() {
