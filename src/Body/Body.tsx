@@ -9,6 +9,7 @@ import { SketchPicker } from "react-color";
 import { createCar } from "../Services/CreateCarService.ts";
 import { updateCar } from "../Services/UpdateCarService.ts";
 import { generateRandomCar } from "../Services/GenerateRandomCarService.ts";
+import { ColorResult } from "react-color";
 
 function Body() {
   const [currentColor, setCurrentColor] = useState("#DFFF00");
@@ -17,7 +18,7 @@ function Body() {
   const [colorCurrent, setColorCurrent] = useState("#fff");
   const [carName, setCarName] = useState("");
   const [cars, setCars] = useState<CarType[]>([]);
-  const carRefs = useRef([]);
+  const carRefs = useRef<(CarRef | null)[]>([]);
 
   useEffect(() => {
     updateCarsList();
@@ -71,11 +72,11 @@ function Body() {
     }
   };
 
-  const handleOnChange = (color) => {
+  const handleOnChange = (color: ColorResult) => {
     setCurrentColor(color.hex);
   };
 
-  const handleCangeColor = (color) => {
+  const handleCangeColor = (color: ColorResult) => {
     setColorCurrent(color.hex);
   };
 
@@ -179,12 +180,17 @@ function Body() {
       {cars.map((car, index) => (
         <Car
           key={index}
-          car={car}
+          car={{
+            ...car,
+            velocity: 0, // Provide default value for velocity
+            distance: 0, // Provide default value for distance
+          }}
           onRemove={handleRemoveCar}
           onUpdate={handleUpdateCar}
           ref={(ref) => (carRefs.current[index] = ref)}
         />
       ))}
+
       <div className="element-with-border"></div>
     </section>
   );
