@@ -80,8 +80,7 @@
   background-color: #fff;
   border: 3px solid #fff;
 }
-.header-button:nth-child(1) {
-}
+
 .header-button:nth-child(2) {
   align-self: baseline;
 }

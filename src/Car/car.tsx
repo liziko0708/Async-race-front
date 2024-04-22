@@ -49,9 +49,9 @@ const Car: React.ForwardRefRenderFunction<CarRef, CarProps> = (
 
   const handleRaceACar = async () => {
     try {
-      const startResponse: RaceResponse = await raceACar(car.id, "started");
+      const startResponse = (await raceACar(car.id, "started")) as RaceResponse;
 
-      const driveResponse: RaceResponse = await raceACar(car.id, "drive");
+      const driveResponse = (await raceACar(car.id, "drive")) as RaceResponse;
 
       if (driveResponse.success === true) {
         const duration = startResponse.distance / startResponse.velocity;

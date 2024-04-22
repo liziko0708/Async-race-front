@@ -2,8 +2,8 @@ import "../Body/Body.css";
 import ResetIcon from "../assets/reset.svg";
 import PlayIcon from "../assets/play.svg";
 import Arrowsvg from "../assets/arrow.svg";
-import Car from "../Car/car.tsx";
 import { fetchCars, Car as CarType } from "../Services/carService.ts";
+import Car, { CarRef } from "../Car/car.tsx";
 import { useRef, useEffect, useState } from "react";
 import { SketchPicker } from "react-color";
 import { createCar } from "../Services/CreateCarService.ts";
@@ -91,9 +91,10 @@ function Body() {
   const handleRaceAllCars = async () => {
     try {
       // Trigger the race action for all cars simultaneously
-      const racePromises = carRefs.current.map((carRef) =>
-        carRef.handleRaceACar()
-      );
+      const racePromises = carRefs.current
+        .filter((carRef) => carRef !== null)
+        .map((carRef) => carRef?.handleRaceACar?.()); // Optional chaining here
+
       await Promise.all(racePromises);
     } catch (error) {
       console.error("Failed to start the race:", error);
