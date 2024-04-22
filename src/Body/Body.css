@@ -6,17 +6,27 @@
   align-items: center;
   justify-content: space-between;
   border-radius: 5px;
+  margin-bottom: 50px;
 }
 .button {
   display: flex;
   align-items: center;
   gap: 5px;
   color: #fff;
-  border: 3px solid;
+  border: 3px solid #f535aa;
   border-radius: 5px;
   padding: 3px 10px;
   cursor: pointer;
+  transition: 0.3s;
 }
+.button:hover {
+  box-shadow: 0 0 5px #f535aa, /* Neon pink */ 0 0 10px #f535aa,
+    0 0 15px #f535aa, 0 0 20px #f535aa;
+  color: #f535aa;
+  background-color: #fff;
+  border: 3px solid #fff;
+}
+
 .icon {
   width: 20px;
 }
@@ -35,9 +45,11 @@ p {
   position: relative;
 }
 input {
-  padding: 5px 2px;
+  padding: 5px;
   border-radius: 5px;
   border-width: 0;
+  color: #898989;
+  font-family: "Pixelify Sans", sans-serif;
 }
 input:active {
   border: none;
@@ -80,4 +92,19 @@ input:active {
 }
 .arrow-svg {
   width: 30px;
+}
+
+@media (max-width: 1100px) {
+  .body-buttons {
+    font-size: 14px;
+  }
+  input {
+    width: 130px;
+  }
+}
+
+@media (max-width: 950px) {
+  .all-buttons {
+    flex-wrap: wrap;
+  }
 }

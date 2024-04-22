@@ -69,11 +69,75 @@
   color: #fff;
   text-shadow: 0 0 10px white, 0 0 20px white, 0 0 30px white, 0 0 40px #00fff3,
     0 0 70px #00fff2, 0 0 80px #00fff3, 0 0 100px #00fff3, 0 0 150px #00fff3; /* Add multiple shadows to create a glowing effect */
-  border: 3px solid #ff6ec7;
+  border: 3px solid #f535aa;
   border-radius: 15px;
+  transition: 0.3s;
+}
+.header-button:hover {
+  box-shadow: 0 0 5px #f535aa, /* Neon pink */ 0 0 10px #f535aa,
+    0 0 15px #f535aa, 0 0 20px #f535aa;
+  color: #f535aa;
+  background-color: #fff;
+  border: 3px solid #fff;
 }
 .header-button:nth-child(1) {
 }
 .header-button:nth-child(2) {
   align-self: baseline;
+}
+
+@media (max-width: 1100px) {
+  .header {
+    gap: 100px;
+  }
+  .left-side {
+    gap: 50px;
+  }
+  .right-side {
+    gap: 50px;
+  }
+  .circle {
+    width: 150px;
+    height: 150px;
+    font-size: 24px;
+  }
+
+  .header-button {
+    padding: 0;
+  }
+}
+
+@media (max-width: 950px) {
+  .header {
+    gap: 50px;
+  }
+  .circle {
+    border: none;
+    box-shadow: none;
+    font-size: 36px;
+  }
+  .Arrow {
+    width: 40%;
+  }
+}
+@media (min-width: 500px) {
+  .header {
+    gap: 0;
+  }
+  .left-side {
+    justify-content: flex-start;
+    margin-top: 0;
+  }
+  .header-button {
+    width: 100px;
+    padding: 5px;
+  }
+  .header-button h1 {
+    margin: 0;
+    font-size: 14px;
+  }
+
+  .Arrow {
+    display: none;
+  }
 }
